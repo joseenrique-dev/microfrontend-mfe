@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 const mount = ( el ) => {
     ReactDOM.render(
@@ -11,7 +12,7 @@ if (process.env.NODE_ENV === 'development'){
     const devRoot = document.querySelector('#_marketing-dev-root');
     
     if(devRoot){
-        mount(_marketing-dev-root);
+        mount(devRoot);
     }
 }
 
