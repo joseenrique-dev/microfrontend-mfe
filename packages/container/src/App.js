@@ -1,7 +1,10 @@
 import React from 'react';
-import { mount } from 'marketing/MarketingApp'
+import MarketingApp from './components/MarketingApp'
 
-console.log('mount-->', mount)
 export default () =>{
-    return <h1>Hi there from container package!!!</h1>
+    return <div>
+        <h1>Hi there from container package!!!</h1>
+        <hr />
+        <MarketingApp />
+    </div>
 }
