@@ -3,6 +3,7 @@ import { StylesProvider, createGenerateClassName } from '@material-ui/core';
 import { Router, Route, Switch } from 'react-router-dom';
 import Landing from "./components/Landing";
  import Pricing from "./components/Pricing";
+ //TODO: upgrade this...
 
  const generateClassName = createGenerateClassName({
     productionPrefix: 'ma'
