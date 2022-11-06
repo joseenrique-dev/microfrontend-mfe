@@ -5,13 +5,19 @@ import { useHistory } from 'react-router-dom';
 export default () => {
     const ref = useRef(null);
     const history = useHistory();
-    useEffect(()=>{
-        mount( ref.current, {
+
+useEffect(()=>{
+        const { onParentNavigate } = mount( ref.current, {
             onNavigate: ({ pathname: nextPathName }) =>{
+                const { pathname } = history.location; 
                 console.log('On navigation--> ', nextPathName);
-                history.push( nextPathName );
+                if( pathname !== nextPathName ) {
+                    history.push( nextPathName );
+                }
             }
         })
-    })
+        history.listen( onParentNavigate );
+    },[]);
+    
     return <div ref={ref}></div>
 }
